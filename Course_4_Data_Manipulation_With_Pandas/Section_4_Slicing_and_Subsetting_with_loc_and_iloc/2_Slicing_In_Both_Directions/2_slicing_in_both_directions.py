@@ -16,11 +16,11 @@ temperatures_ind = temperatures.set_index(['country', 'city'])
 # Sort the index of temperatures_ind
 temperatures_srt = temperatures_ind.sort_index()
 
-# Subset rows from Pakistan to Philippines
-print(temperatures_srt.loc['Pakistan':'Philippines'])
+# Subset rows from India, Hyderabad to Iraq, Baghdad
+print(temperatures_srt.loc[('India', 'Hyderabad'):('Iraq', 'Baghdad')])
 
-# Try to subset rows from Lahore to Manila
-print(temperatures_srt.loc['Lahore':'Manila'])
+# Subset columns from date to avg_temp_c
+print(temperatures_srt.loc[:,'date':'avg_temp_c'])
 
-# Subset rows from Pakistan, Lahore to Philippines, Manila
-print(temperatures_srt.loc[('Pakistan', 'Lahore'):('Philippines','Manila')])
+# Subset in both directions at once
+print(temperatures_srt.loc[('India', 'Hyderabad'):('Iraq', 'Baghdad'),'date':'avg_temp_c'])

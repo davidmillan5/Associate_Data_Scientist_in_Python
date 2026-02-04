@@ -88,3 +88,9 @@ genre_count = genres_movies.groupby('genre_x').agg({'id':'count'})
 # Plot a bar chart of the genre_count
 genre_count.plot(kind='bar')
 plt.show()
+
+
+"""
+Using ou=uter join to select actors
+"""
+
